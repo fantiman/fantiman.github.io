@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Links</title>
+</head>
+<body>
+    <h1>Dynamic Links and Navigation</h1>
+
+    <!-- Text field to change the href of an anchor tag -->
+    <label for="linkInput">Change the href of the anchor tag:</label>
+    <input type="text" id="linkInput" placeholder="Enter a new URL">
+    <button onclick="openNewWindowWithHref()">Open in New Window</button>
+
+    <!-- Text field to change the current window location -->
+    <label for="locationInput">Change the window location:</label>
+    <input type="text" id="locationInput" placeholder="Enter a new URL">
+    <button onclick="changeLocation()">Change Location</button>
+
+    <script>
+        function openNewWindowWithHref() {
+            const newHref = document.getElementById('linkInput').value;
+            window.open(newHref, '_blank');
+        }
+
+        function changeLocation() {
+            const newLocation = document.getElementById('locationInput').value;
+            window.location.href = newLocation;
+        }
+    </script>
+</body>
+</html>
